@@ -17,7 +17,13 @@
 #include <string>
 using namespace std;
 
-#define MAX_DIGITS 8
+//#define MAX_DIGITS 8
+const char one = '1';
+const char two = '2';
+const char three = '3';
+const char four = '4';
+const int EIGHT = 8;
+
 namespace ariel{
 
 string snowman(int input) {
@@ -27,7 +33,7 @@ string snowman(int input) {
 try
 {
 
-  if(snow.size()==MAX_DIGITS){
+  if(snow.size()==EIGHT){
 
      //checks each number to see if its between 1-4, else throws exeption and return 0
         int ind = TestChar(snow);
@@ -87,7 +93,7 @@ int TestChar (string input_s){
 
    for (int i = 0; i < 8; i++)
         {   
-          if ((input_s.at(i)>'4') || (input_s.at(i) <'1'))
+          if ((input_s.at(i)>four) || (input_s.at(i) <one))
           {
             throw std::invalid_argument( "received negative value" );
             throw(input_s);
@@ -102,19 +108,19 @@ return 1;
 string HeadBuild ( char option){
   string curr;
   switch(option){
-    case '1': 
+    case one: 
      return "       \n _===_ \n";
      break;
 
-    case '2':
+    case two:
      return "  ___  \n ..... \n";
      break;
 
-    case '3':
+    case three:
      return "   _   \n  /_\\  \n";
      break;
 
-    case '4':
+    case four:
      return "  ___  \n (_*_) \n";
      break;
     
@@ -129,19 +135,19 @@ return curr;
 string FirstLeftArmBuild ( char option){
   string curr;
   switch(option){
-    case '1':
+    case one:
       return " (";
       break;
 
-    case '2':
+    case two:
     return "\(";
     break;
 
-    case '3':
+    case three:
     return " (";
     break;
 
-    case '4':
+    case four:
     return " (";
     break;
     default : return curr;
@@ -153,19 +159,19 @@ return curr;
 string EyeBuild (char option){
   string curr;
   switch(option){
-    case '1':
+    case one:
     return ".";
     break;
 
-    case '2':
+    case two:
     return "o";
     break;
 
-    case '3':
+    case three:
     return "O";
     break;
 
-    case '4':
+    case four:
     return "-";
     break;
 
@@ -177,19 +183,19 @@ return curr;
 string NoseBuild (char option){
   string curr;
 switch(option){
-    case '1':
+    case one:
     return ",";
     break;
 
-    case '2':
+    case two:
     return ".";
     break;
 
-    case '3':
+    case three:
     return "_";
     break;
 
-    case '4':
+    case four:
     return " ";
     break;
 
@@ -204,19 +210,19 @@ return curr;
 string FirstRightArmBuild (char option){
    string curr;
   switch(option){
-    case '1':
+    case one:
      return") \n";
      break;
 
-    case '2':
+    case two:
      return")/\n";
      break;
 
-    case '3':
+    case three:
      return ") \n";
      break;
 
-    case '4':
+    case four:
       return ") \n";
       break;
 
@@ -228,19 +234,19 @@ string FirstRightArmBuild (char option){
 string SecondLeftArmBuild (char option){
   string curr;
   switch(option){
-    case '1':
+    case one:
     return "<(";
     break;
 
-    case '2':
+    case two:
     return " (";
     break;
 
-    case '3':
+    case three:
     return "/(";
     break;
 
-    case '4':
+    case four:
     return " (";
     break;
 
@@ -252,19 +258,19 @@ return curr;
 string TorsoBuild (char option){
   string curr;
   switch(option){
-    case '1':
+    case one:
     return " : ";
     break;
 
-    case '2':
+    case two:
     return "] [";
     break;
 
-    case '3':
+    case three:
     return "> <";
     break;
 
-    case '4':
+    case four:
     return "   ";
     break;
 
@@ -276,19 +282,19 @@ return curr;
 string SecondRightArmBuild (char option){
   string curr;
   switch(option){
-    case '1':
+    case one:
     return ")>\n";
     break;
 
-    case '2':
+    case two:
     return ") \n";
     break;
 
-    case '3':
+    case three:
     return ")\\n";
     break;
 
-    case '4':
+    case four:
     return ") \n";
     break;
 
@@ -300,19 +306,19 @@ return curr;
 string BaseBuild ( char option){
   string curr;
   switch(option){
-    case '1':
+    case one:
     return " ( : ) ";
     break;
 
-    case '2':
+    case two:
     return " (" ") ";
     break;
 
-    case '3':
+    case three:
     return " (___) ";
     break;
 
-    case '4':
+    case four:
     return " (   ) ";
     break;
 

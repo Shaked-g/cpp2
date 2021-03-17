@@ -11,7 +11,7 @@
 #include <string>
 using namespace std;
 
-#define MAX_DIGITS 8
+//#define MAX_DIGITS 8
 namespace ariel{
 string snowman(int input);
 int TestChar (string input_s);
